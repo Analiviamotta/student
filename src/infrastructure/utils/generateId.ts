@@ -1,8 +1,13 @@
 // Types
-import { EntityName } from "../../application/dtos/shared/entityName"
+import { EntityName } from "../../application/dtos/shared"
+
+
+let counter = 0
 
 export function generateId(entityName: EntityName): string {
-    const currentDate = new Date()
 
-    return `${entityName}-${currentDate.toLocaleDateString().replace(' ', '-')}`
+    const random = Math.floor(Math.random() * 1000000)
+    counter = (counter + 1) % 1000
+
+    return `${entityName}-${random}-${counter}`
 }
