@@ -25,7 +25,7 @@ seminar.addStudent(student2)
 seminar.addStudent(student3)
 seminar.addStudent(student4)
 
-console.log("lista de estudantes" + seminar.getStudents())
+console.log("lista de estudantes" + JSON.stringify(seminar.getStudents()))
 
 seminar.removeStudent(student1.getId())
 
@@ -38,4 +38,4 @@ console.log(registration1.getGenderAverage())
 seminar.removeStudent(student2.getId())
 console.log(registration1.getGenderAverage())
 
-console.log("lista de estudantes" + seminar.getStudents())
+console.log("lista de estudantes" + JSON.stringify(seminar.getStudents()))
